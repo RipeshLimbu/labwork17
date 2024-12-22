@@ -1,0 +1,19 @@
+<?php
+// Function to calculate the area of a circle
+function calculateCircleArea($radius) {
+    // Ensure the radius is non-negative
+    if ($radius < 0) {
+        return "Radius cannot be negative.";
+    }
+    // Calculate the area
+    $area = pi() * pow($radius, 2);
+    return $area;
+}
+
+// Test cases
+$testRadii = [0, 1, 2.5, -3, 10];
+
+foreach ($testRadii as $radius) {
+    echo "Radius: $radius, Area: " . calculateCircleArea($radius) . "\n";
+}
+?>
